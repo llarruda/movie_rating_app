@@ -1,47 +1,72 @@
 <template>
-  <v-app-bar id="inspire">
+  <v-app id="inspire">
     <v-navigation-drawer
-     fixed
-     v-model="drawer"
-     app
+      v-model="drawer"
+      app
     >
       <v-list dense>
-        <router-link
-         v-bind:to="{ name: 'Home' }"
-         class="side_bar_link"
-        >
-          <v-list-item>
+        <router-link v-bind:to="{ name: 'Home' }" class="side_bar_link">
+          <v-list-item link>
             <v-list-item-action>
-              <v-icon>home</v-icon>
+              <v-icon>mdi-home</v-icon>
             </v-list-item-action>
-            <v-list-item-content>Home</v-list-item-content>
+            <v-list-item-content>
+              <v-list-item-title>Home</v-list-item-title>
+            </v-list-item-content>
           </v-list-item>
         </router-link>
-        <router-link v-bind:to="{ name: 'Contact'}" class="side_bar_link">
-          <v-list-item>
+        <router-link v-bind:to="{ name: 'Contact' }" class="side_bar_link">
+          <v-list-item link>
             <v-list-item-action>
-              <v-icon>contact_mail</v-icon>
+              <v-icon>mdi-contact-mail</v-icon>
             </v-list-item-action>
-            <v-list-item-content>Contact</v-list-item-content>
+            <v-list-item-content>
+              <v-list-item-title>Contact</v-list-item-title>
+            </v-list-item-content>
           </v-list-item>
         </router-link>
-      </v-list>
+        <router-link v-bind:to="{ name: 'Chat' }" class="side_bar_link">
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon>mdi-contact-mail</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>Chat</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </router-link>
+    </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="indigo" dark fixed app>
-      <v-toolbar-side-icon @click.stop="drower = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Home</v-toolbar-title>
-    </v-toolbar>
+
+    <v-app-bar
+      app
+      color="indigo"
+      fixed
+      dark
+    >
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-toolbar-title>Application</v-toolbar-title>
+    </v-app-bar>
+
     <v-content>
-      <v-conteiner fluid>
+      <v-container
+        class="fill-height"
+        fluid
+      >
+
         <div id="app">
           <router-view/>
         </div>
-      </v-conteiner>
+
+      </v-container>
     </v-content>
-    <v-footer color="indigo" app>
-      <span class="white-text">&copy; 2020</span>
+    <v-footer
+      color="indigo"
+      app
+    >
+      <span class="white--text">&copy; Sigmafone 2020</span>
     </v-footer>
-  </v-app-bar>
+  </v-app>
 </template>
 
 <script>

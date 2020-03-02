@@ -12,6 +12,13 @@ import router from './router';
 Vue.use(BootstrapVue);
 Vue.use(Vuetify);
 
+// export an object Vuetify with icon property to use material icons alphabet
+export default new Vuetify({
+  icons: {
+    iconfont: 'mdiSvg',
+  },
+});
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

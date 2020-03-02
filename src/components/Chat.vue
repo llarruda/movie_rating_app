@@ -1,5 +1,5 @@
 <template>
   <v-layout>
-    hello world
+    this is chat
   </v-layout>
 </template>

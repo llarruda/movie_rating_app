@@ -1,5 +1,5 @@
 <template>
   <v-layout>
-    hello world
+    this is home
   </v-layout>
 </template>
