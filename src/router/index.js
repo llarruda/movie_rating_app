@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from '@/components/Home';
 import Contact from '@/components/Contact';
 import Chat from '@/components/Chat';
+import Raw from '@/components/Raw';
 
 Vue.use(Router);
 
@@ -21,6 +22,11 @@ export default new Router({
       path: '/chat',
       name: 'Chat',
       component: Chat,
+    },
+    {
+      path: '/raw',
+      name: 'Raw',
+      component: Raw,
     },
   ],
 });

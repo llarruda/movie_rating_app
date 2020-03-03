@@ -35,13 +35,22 @@
             </v-list-item-content>
           </v-list-item>
         </router-link>
-    </v-list>
+        <router-link v-bind:to="{ name: 'Raw' }" class="side_bar_link">
+          <v-list-item link>
+            <v-list-item-action>
+              <v-icon>mdi-contact-mail</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>Raw</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </router-link>
+      </v-list>
     </v-navigation-drawer>
 
     <v-app-bar
       app
       color="indigo"
-      fixed
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
