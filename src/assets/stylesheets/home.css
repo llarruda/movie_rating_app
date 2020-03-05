@@ -16,3 +16,9 @@
   a.side_bar_link {
     text-decoration: none;
   }
+  .card__title--primary, .card__text {
+    text-align: left;
+  }
+  .card {
+    height: 100% !important;
+ }
