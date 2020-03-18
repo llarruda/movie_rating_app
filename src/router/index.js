@@ -4,6 +4,7 @@ import Home from '@/components/Home';
 import Contact from '@/components/Contact';
 import Chat from '@/components/Chat';
 import Raw from '@/components/Raw';
+import AddMovie from '@/components/AddMovie';
 
 Vue.use(Router);
 
@@ -27,6 +28,11 @@ export default new Router({
       path: '/raw',
       name: 'Raw',
       component: Raw,
+    },
+    {
+      path: '/movies/add',
+      name: 'AddMovie',
+      component: AddMovie,
     },
   ],
 });
